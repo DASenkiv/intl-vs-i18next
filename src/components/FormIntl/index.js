@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { IntlProvider, useIntl, FormattedMessage, FormattedPlural } from "react-intl";
+import { IntlProvider, useIntl, FormattedMessage } from "react-intl";
 import en from "./locales/en";
 import ru from "./locales/ru";
 import { languages } from '../../utils';
