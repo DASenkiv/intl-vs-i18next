@@ -20,9 +20,6 @@ const FormI18nWithoutProvider = props => {
         day: 'numeric',
     });
 
-    console.log('mess', intl.messages)
-
-
     return (
         <div>
             <div>
