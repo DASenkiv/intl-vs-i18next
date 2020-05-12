@@ -1,6 +1,6 @@
 {
-    "CurrentLocale": "Текущий язык",
+    "CurrentLocale": "Текущий язык {{locale}}",
     "ru": "Русский",
     "en": "Английский",
-    "TodayKey": "Сегодня  {{date}}"
+    "TodayKey": "Сегодня"
 }

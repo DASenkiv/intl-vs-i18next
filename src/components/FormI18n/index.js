@@ -17,11 +17,18 @@ const FormI18n = props => {
 
     return (
         <div>
-            <div>{t('CurrentLocale')}: {t(i18n.language)} </div>
-            <button onClick={() => i18n.changeLanguage(languages.ru)}>{t(languages.ru)}</button>
-            <button onClick={() => i18n.changeLanguage(languages.en)}>{t(languages.en)}</button>
+            <div>{t('CurrentLocale', { locale: i18n.language })}</div>
+            <button
+                onClick={() => i18n.changeLanguage(languages.ru)}>
+                {t(languages.ru)}
+            </button>
+            <button
+                onClick={() => i18n.changeLanguage(languages.en)}
+            >
+                {t(languages.en)}
+            </button>
             <div>
-                {t("TodayKey", { date })}
+                {t("TodayKey")} {date}
             </div>
             <input
                 value={identifier}

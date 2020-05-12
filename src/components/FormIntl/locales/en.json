@@ -1,8 +1,8 @@
 {
-    "CurrentLocale": "Current locale",
+    "CurrentLocale": "Current locale is {locale}",
     "ru": "Russian",
     "en": "English",
-    "TodayKey": "Today is {date}",    
+    "TodayKey": "Today is",    
     "LoginPlaceholder": "Input login",
     "Login": "Login",
     "LoginMessage": "Login successfully!"

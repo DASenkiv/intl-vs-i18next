@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import { IntlProvider, useIntl, FormattedMessage } from "react-intl";
+import { IntlProvider,
+     useIntl,
+      FormattedMessage, FormattedDate } from "react-intl";
 import en from "./locales/en";
 import ru from "./locales/ru";
 import { languages } from '../../utils';
@@ -14,20 +16,18 @@ const FormI18nWithoutProvider = props => {
     const [isLoading, setIsLoading] = useState(false);
 
 
-    const date = intl.formatDate(Date.now(), {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric',
-    });
-
     return (
         <div>
             <div>
                 <FormattedMessage
-                    id="TodayKey"
-                    values={{
-                        date
-                    }} />
+                    id='TodayKey'
+                /> {" "}
+                <FormattedDate
+                    value={Date.now()}
+                    year='numeric'
+                    month='long'
+                    day='numeric'
+                />
             </div>
             <input
                 value={identifier}
@@ -75,9 +75,19 @@ const FormI18n = (props) => {
         >
             <div>
                 <div>
-                    <FormattedMessage id="CurrentLocale" />: <FormattedMessage id={language} /> </div>
-                <button onClick={() => setLanguage(languages.ru)}><FormattedMessage id={languages.ru} /></button>
-                <button onClick={() => setLanguage(languages.en)}><FormattedMessage id={languages.en} /></button>
+                    <FormattedMessage id="CurrentLocale"
+                        values={{ locale: language }} />
+                </div>
+                <button
+                    onClick={() => setLanguage(languages.ru)}
+                >
+                    <FormattedMessage id={languages.ru} />
+                </button>
+                <button
+                    onClick={() => setLanguage(languages.en)}
+                >
+                    <FormattedMessage id={languages.en} />
+                </button>
                 <FormI18nWithoutProvider {...props} />
             </div>
         </IntlProvider>
