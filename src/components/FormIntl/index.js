@@ -1,7 +1,10 @@
 import React, { useState } from "react";
-import { IntlProvider,
-     useIntl,
-      FormattedMessage, FormattedDate } from "react-intl";
+import {
+    IntlProvider,
+    useIntl,
+    FormattedMessage,
+    FormattedDate
+} from "react-intl";
 import en from "./locales/en";
 import ru from "./locales/ru";
 import { languages } from '../../utils';
@@ -64,7 +67,7 @@ const FormI18nWithoutProvider = props => {
 
 const FormI18n = (props) => {
 
-    const [language, setLanguage] = useState(languages.en);
+    const [language, setLanguage] = useState(languages.ru);
 
     return (
         <IntlProvider
@@ -74,6 +77,7 @@ const FormI18n = (props) => {
             defaultLocale="en"
         >
             <div>
+                <div><FormattedMessage id="passedMessage" /></div>
                 <div>
                     <FormattedMessage id="CurrentLocale"
                         values={{ locale: language }} />

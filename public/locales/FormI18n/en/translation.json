@@ -2,5 +2,6 @@
     "CurrentLocale": "Current locale is {{locale}}",
     "ru": "Russian",
     "en": "English",
-    "TodayKey": "Today is"
+    "TodayKey": "Today is",
+    "passedMessage": "This is passed message"
 }

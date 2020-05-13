@@ -17,6 +17,7 @@ const FormI18n = props => {
 
     return (
         <div>
+            <div>{t('passedMessage')}</div>
             <div>{t('CurrentLocale', { locale: i18n.language })}</div>
             <button
                 onClick={() => i18n.changeLanguage(languages.ru)}>
