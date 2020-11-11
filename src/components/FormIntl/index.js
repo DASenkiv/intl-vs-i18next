@@ -98,6 +98,4 @@ const FormI18n = (props) => {
     )
 }
 
-
-
 export default FormI18n;
