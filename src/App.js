@@ -6,8 +6,8 @@ const App = props => {
 
   return (
     <div className='container'>
-      <FormI18n />
-      <FormIntl />
+      <FormI18n className='fixed-container'/>
+      <FormIntl className='fixed-container'/>
     </div>
   );
 };

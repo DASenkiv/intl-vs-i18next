@@ -11,7 +11,7 @@ import { languages } from '../../utils';
 
 const locales = { en, ru };
 
-const FormI18nWithoutProvider = props => {
+const FormIntlWithoutProvider = props => {
     const intl = useIntl();
 
     const [identifier, setIdentifier] = useState("");
@@ -65,7 +65,7 @@ const FormI18nWithoutProvider = props => {
     );
 };
 
-const FormI18n = (props) => {
+const FormIntl = (props) => {
 
     const [language, setLanguage] = useState(languages.ru);
 
@@ -92,10 +92,10 @@ const FormI18n = (props) => {
                 >
                     <FormattedMessage id={languages.en} />
                 </button>
-                <FormI18nWithoutProvider {...props} />
+                <FormIntlWithoutProvider {...props} />
             </div>
         </IntlProvider>
     )
 }
 
-export default FormI18n;
+export default FormIntl;
